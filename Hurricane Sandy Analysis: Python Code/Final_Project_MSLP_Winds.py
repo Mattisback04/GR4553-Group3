@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 """
 Created on Wed Apr 22 15:06:29 2026
 
-@author: noell
+@author: Noelle Davis
 """
 
 import pygrib 
@@ -11,15 +10,14 @@ import matplotlib.pyplot as plt
 import cartopy.crs as ccrs 
 import cartopy.feature as cfeature 
 
-# Replace file name in '' with the file you want to use
+# Replace with the path to your desired GRIB2 file.
 grbs = pygrib.open('gfs_4_20121029_0600_027.grb2') 
 
-# Surface Pressure Message 
+# Uncomment print statement below to see all messages in the GRIB file
+# for msg in grbs:
+#   print(msg)
 
-# Commeted out print statement reads all messages in data file, not needed to run the main code
-#for msg in grbs:
- #   print(msg)
-
+# Mean sea level pressure message 
 sfcMSLPMSG = grbs[207]
 #print(sfcMSLPMSG)
 
@@ -44,7 +42,7 @@ fig = plt.figure(figsize=(8, 8))
 proj = ccrs.LambertConformal(central_longitude=-90.0, central_latitude=35.0) 
 ax = plt.axes(projection=proj) 
 
-# Updated Extent: 80W to 60W and 35N to 47N 
+# Updated Extent: 80W to 60W and 35N to 46N 
 
 ax.set_extent([-80, -60, 35, 46], crs=ccrs.PlateCarree()) 
 
@@ -88,7 +86,7 @@ plt.barbs(lons[::5,::5],lats[::5,::5],uKNOT[::5,::5],vKNOT[::5,::5],transform=cc
 
 plt.title('Mean Sea Level Pressure & Winds') 
 
-#replace savefig name after mslp_winds_ to refelct your filename
+# Replace the "save figure" naming convention after mslp_winds_ to reflect the naming convention of your choice. 
 plt.savefig('mslp_winds_0600_027')
 
 plt.show() 
