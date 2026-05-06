@@ -8,3 +8,8 @@
 *Buoy Data*: To analyze surface-level changes, buoy data was retrieved from the National Data Buoy Center (NDBC). Specifically, we used data from Station ACYN4 to highlight the significant pressure drop and subsequent rise before and after Sandy's passing.
 
 *500mb Geopotential Height & RH and MSLP & Wind*s: The maps displaying 500mb geopotential height with relative humidity, as well as MSLP with surface winds, were created using GFS analysis data. This data was sourced from the NCEI NOAA archive. To replicate or adjust this data, you can navigate to the link and select the specific time of interest (e.g., October 29th for the peak time of Hurricane Sandy).
+
+
+* **Buoy Data**: To analyze surface-level changes, buoy data was retrieved from the National Data Buoy Center (NDBC). Click [here for the Station ACYN4 data](https://www.ndbc.noaa.gov/station_page.php?station=acyn4) to highlight the significant pressure drop and subsequent rise before and after Sandy's passing.
+
+* **500mb Geopotential Height & RH and MSLP & Winds**: The maps displaying 500mb geopotential height with relative humidity, as well as MSLP with surface winds, were created using GFS analysis data. Click [here for the NCEI NOAA archive](https://www.ncei.noaa.gov/has/HAS.FileAppRouter?datasetname=GFSANL4&subqueryby=STATION&applname=&outdest=FILE) to retrieve this data. To replicate or adjust it, navigate to the link and select the specific time of interest (for instance, October 29th for the peak time of Hurricane Sandy).
