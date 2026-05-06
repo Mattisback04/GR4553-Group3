@@ -5,7 +5,7 @@
 """
 Created on Wed Apr 29 15:08:03 2026
 
-@author: noell
+@author: Noelle Davis
 """
 
 import cartopy.crs as ccrs
@@ -47,7 +47,7 @@ avg_spacing = diff.mean()
 az = (az[:-1] + az[1:]) / 2
 az[crossed] += 180.
 
-# Concatenate with overall start and end of data we calculate using the average spacing
+# Concatenate with the overall start and end of data we calculate using the average spacing
 az = np.concatenate(([az[0] - avg_spacing], az, [az[-1] + avg_spacing]))
 az = units.Quantity(az, 'degrees')
 
